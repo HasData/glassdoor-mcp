@@ -1,0 +1,61 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.hasdata/glassdoor",
+  "title": "HasData Glassdoor",
+  "description": "Glassdoor job listings and full job postings with company ratings and salary estimates, as structured JSON.",
+  "version": "1.0.0",
+  "websiteUrl": "https://hasdata.com/apis/glassdoor-api",
+  "repository": {
+    "url": "https://github.com/HasData/glassdoor-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.hasdata.com/api/mcp?apis=glassdoor",
+      "headers": [
+        {
+          "name": "x-api-key",
+          "description": "HasData API key, created at app.hasdata.com. 1,000 free credits every month, no card.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@hasdata/glassdoor-mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "HASDATA_API_KEY",
+          "description": "HasData API key, created at app.hasdata.com. 1,000 free credits every month, no card.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    },
+    {
+      "registryType": "pypi",
+      "identifier": "hasdata-glassdoor-mcp",
+      "version": "1.0.0",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "HASDATA_API_KEY",
+          "description": "HasData API key, created at app.hasdata.com. 1,000 free credits every month, no card.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
