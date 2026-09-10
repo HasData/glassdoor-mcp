@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.hasdata/glassdoor",
   "title": "HasData Glassdoor",
-  "description": "Glassdoor job listings and full job postings with company ratings and salary estimates, as structured JSON.",
+  "description": "Glassdoor job listings and full postings with company ratings and salary estimates, as JSON.",
   "version": "1.0.0",
   "websiteUrl": "https://hasdata.com/apis/glassdoor-api",
   "repository": {
