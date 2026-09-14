@@ -167,10 +167,10 @@ A prompt that names a role goes to the listing tool, and reading the full descri
 
 ## Tools
 
-| Tool | Credits | What it returns |
-| :--- | :--- | :--- |
-| `hasdata_glassdoor_job_getJobDetails` | 10 | Job title, company name and rating, location, salary estimate, employment type, posted date, full job description, qualifications/benefits, and apply link |
-| `hasdata_glassdoor_listing_getJobListings` | 10 | An array of jobs with title, company, location, salary estimate, posted date, job URL, and jobId, plus the next page token |
+| Tool | What it returns |
+| --- | --- |
+| `hasdata_glassdoor_job_getJobDetails` | Job title, company name and rating, location, salary estimate, employment type, posted date, full job description, qualifications/benefits, and apply link. 10 credits a call |
+| `hasdata_glassdoor_listing_getJobListings` | An array of jobs with title, company, location, salary estimate, posted date, job URL, and jobId, plus the next page token. 10 credits a call |
 
 Two tools, 10 credits per successful call.
 
