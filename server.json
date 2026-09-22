@@ -3,7 +3,7 @@
   "name": "com.hasdata/glassdoor",
   "title": "HasData Glassdoor",
   "description": "Glassdoor job listings and full postings with company ratings and salary estimates, as JSON.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "websiteUrl": "https://hasdata.com/apis/glassdoor-api",
   "repository": {
     "url": "https://github.com/HasData/glassdoor-mcp",
@@ -27,7 +27,7 @@
     {
       "registryType": "npm",
       "identifier": "@hasdata/glassdoor-mcp",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "transport": {
         "type": "stdio"
       },
@@ -43,7 +43,7 @@
     {
       "registryType": "pypi",
       "identifier": "hasdata-glassdoor-mcp",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "runtimeHint": "uvx",
       "transport": {
         "type": "stdio"
