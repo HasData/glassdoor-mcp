@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "hasdata-glassdoor-mcp",
+  "version": "1.0.0",
+  "description": "Glassdoor MCP server for Cursor. Job listings and full postings with employer ratings and salary figures marked as employer-provided or estimated, as structured JSON. Remote MCP server hosted by HasData, connects over streamable HTTP with your HasData API key.",
+  "author": {
+    "name": "HasData",
+    "url": "https://hasdata.com"
+  },
+  "homepage": "https://hasdata.com/apis/glassdoor-api",
+  "repository": "https://github.com/HasData/glassdoor-mcp",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "glassdoor",
+    "glassdoor-mcp",
+    "jobs",
+    "job-search",
+    "recruiting",
+    "model-context-protocol",
+    "hasdata",
+    "scraper"
+  ],
+  "logo": "https://hasdata.com/favicon.svg"
+}
