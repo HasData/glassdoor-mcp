@@ -3,7 +3,7 @@
   "mcpServers": {
     "glassdoor": {
       "type": "streamable-http",
-      "url": "https://mcp.hasdata.com/api/mcp?apis=glassdoor",
+      "url": "https://mcp.hasdata.com/mcp?apis=glassdoor",
       "headers": {
         "x-api-key": "YOUR_HASDATA_API_KEY"
       }
