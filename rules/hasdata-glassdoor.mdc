@@ -1,0 +1,28 @@
+---
+description: How to pull Glassdoor job listings, salaries and employer ratings through the HasData MCP server
+alwaysApply: false
+---
+
+# Glassdoor through HasData
+
+Two tools. `hasdata_glassdoor_listing_getJobListings` takes `keyword` and `location` and returns thirty postings a page. `hasdata_glassdoor_job_getJobDetails` takes the posting `url` and returns that one posting in full.
+
+The listing already carries the salary, the employer rating, the skills and the age of the posting, so most comp and hiring questions are answerable without opening anything.
+
+## The salary field is two different things
+
+`salary.source` reads either `EMPLOYER_PROVIDED` or `ESTIMATED`. The first is a figure the employer published, the second is Glassdoor's own model for that role and market. Averaging across both produces a number that describes neither, so split on `source` before aggregating and name which set a published figure came from.
+
+`min`, `median` and `max` can all be equal, which is a single stated salary rather than a broken range. `salary` can also be absent, and `period` can read `HOURLY`, so converting to an annual figure is an assumption you are making rather than something the response did.
+
+## What only the detail call has
+
+The listing `description` is a snippet and it ends mid-sentence. Full text, stated qualifications and the `expired` flag live on the detail tool, and a listing page still shows postings the employer has closed. Reading every posting in full costs one call each, so open the few that matter rather than the page.
+
+## Paging and domains
+
+`pagination.otherPages` maps a page number to an opaque token, and that token is what `nextPageToken` takes. Keep the other parameters unchanged while paging.
+
+`domain` selects one of the regional Glassdoor sites, and the US site is the default rather than a value you can pass.
+
+Salary figures and employer ratings are Glassdoor's own numbers. Attribute them instead of presenting them as the market.
