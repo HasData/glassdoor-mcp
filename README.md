@@ -354,7 +354,7 @@ Take the token for the page you want from `pagination.otherPages` and send it as
 
 ### Can I use this together with other HasData APIs?
 
-Yes. One key covers everything, and one endpoint serves them all through the `apis` parameter. Point a client at `?apis=glassdoor,indeed` to get both tool sets in one connection, or at [`mcp.hasdata.com/api/mcp`](https://docs.hasdata.com/mcp-server?utm_source=github&utm_medium=syndication&utm_campaign=glassdoor-mcp) for the full catalogue.
+Yes. One key covers everything, and one endpoint serves them all through the `apis` parameter. Point a client at `?apis=glassdoor,indeed` to get both tool sets in one connection, or at [`mcp.hasdata.com/mcp`](https://docs.hasdata.com/mcp-server?utm_source=github&utm_medium=syndication&utm_campaign=glassdoor-mcp) for the full catalogue.
 
 ### Is HasData affiliated with Glassdoor?
 
