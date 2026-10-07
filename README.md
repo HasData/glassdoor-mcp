@@ -16,6 +16,7 @@ https://mcp.hasdata.com/mcp?apis=glassdoor
 [![tool contract](https://github.com/HasData/glassdoor-mcp/actions/workflows/contract.yml/badge.svg)](https://github.com/HasData/glassdoor-mcp/actions/workflows/contract.yml)
 [![MCP](https://img.shields.io/badge/MCP-remote%20%7C%20streamable%20HTTP-6366f1?style=flat-square)](https://mcp.hasdata.com/mcp?apis=glassdoor)
 [![Tools](https://img.shields.io/badge/tools-2-10b981?style=flat-square)](#tools)
+- [Prompts and resources](#prompts-and-resources)
 [![npm](https://img.shields.io/npm/v/@hasdata/glassdoor-mcp?style=flat-square&logo=npm&label=npm&color=cb3837)](https://www.npmjs.com/package/@hasdata/glassdoor-mcp)
 [![PyPI](https://img.shields.io/pypi/v/hasdata-glassdoor-mcp?style=flat-square&logo=pypi&logoColor=white&label=PyPI&color=3775a9)](https://pypi.org/project/hasdata-glassdoor-mcp/)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
@@ -264,6 +265,20 @@ Returns a `job` object. On top of the title, salary and employer the listing alr
   "expired": false
 }
 ```
+
+## Prompts and resources
+
+The server exposes 5 resources, one per parameter whose accepted values are a fixed list. Reading one is cheaper than learning the vocabulary from a rejected call, and it costs no credits. Each URI is `hasdata://glassdoor/<parameter>`.
+
+| Parameter | Values | What it selects |
+| --- | ---: | --- |
+| `sort` | 2 | The sorting option for the search results. |
+| `domain` | 22 | The domain of the Glassdoor site (optional). |
+| `datePosted` | 5 | Returns only jobs posted within the given number of days. |
+| `radius` | 7 | Search radius around the location, in miles. `0` keeps only jobs in the location itself. Glassdoor uses 25 miles when this is not set. |
+| `minRating` | 4 | Returns jobs from companies rated at least this high. Glassdoor applies the filter approximately, so a few companies rated slightly below the value can appear. |
+
+The list is served without an API key, so a client can read it before a user has signed up.
 
 ## Errors and failure paths
 
