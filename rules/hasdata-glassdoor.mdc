@@ -26,3 +26,7 @@ The listing `description` is a snippet and it ends mid-sentence. Full text, stat
 `domain` selects one of the regional Glassdoor sites, and the US site is the default rather than a value you can pass.
 
 Salary figures and employer ratings are Glassdoor's own numbers. Attribute them instead of presenting them as the market.
+
+## Prompts and resources
+
+The server also serves resources that spell out the accepted values of every parameter that takes a fixed list, each one at `hasdata://glassdoor/<parameter>`. Reading one spends no credits and makes no upstream request, which beats discovering the vocabulary from a rejected call. Listing them needs no API key either, so a client can read them before the user has connected an account.
